@@ -152,96 +152,155 @@ h5 {
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 .container {
-  width: 1080px;
-
-  border: 10px dashed black;  
+  width: 880px;
   margin: 0 auto;
+  justify-content: center;
+}
+a:hover {
+  background-color: darkviolet;
+  color: white;
 }
 
 header {
-  width: 100%;
-  padding: 20px;
-  ;
-  
-    display: flex;
-  align-items: baseline; 
+  width: 98%;
+  padding: 20px auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav {
-    
-    width: 70%;
+  color: blueviolet;
   display: flex;
-  padding: 1%;
-    margin: 5% auto;
+  justify-content: space-evenly;
+  margin: 5% 0;
 }
-  
 
 nav a {
-  color: grey;
   text-decoration: none;
-  padding: 0 25px 0px;
-  /* border: 3px solid blue; */
+  padding: 0.75%;
 }
 .logo {
-   width: 30%;
-  }
-  /* ---TOP CONTENT--- */
+  width: 20%;
+}
+/* ---TOP CONTENT--- */
+main {
+  background-color: black;
+}
 .Profile {
-  text-align: center;
-  /* border: 3px solid green; */
   display: flex;
-  /* justify-content: space-between; */
+  flex-flow: row;
+  background-color: white;
+  padding: 20px;
+  border: 3px dashed blueviolet;
+  margin: 2.5%;
 }
-.Profile h1 {
+h1 {
   font-size: 80px;
-  /* border: 1px dashed red; */
 }
-
- div img {
-  width: 50%;
+.Profile img {
+  height: 85%;
 }
-/*   ---SECTION CONTENT---- */
+/* ----MIDDLE SECTION---- */
 .content {
-  
   display: flex;
   flex-flow: wrap;
-  
+}
+.content a {
+  text-decoration: none;
+  color: aliceblue;
 }
 .content h2 {
-  font-size:50px;
+  font-size: 50px;
 }
 .content div {
-width: 43%;
-margin: 2.5%;
-padding: 20px;
-border: 3px solid black;
+  height: 50%;
+  width: 45%;
+  margin: 2.5%;
+  padding: 20px;
+  background-color: blueviolet;
+  color: aliceblue;
+  border: 3px solid purple;
+  display: flex;
+  flex-flow: wrap;
+  text-decoration: none;
 }
+.p-content {
+  display: flex;
+  justify-content: center;
+}
+.p-content div img {
+  width: 50%;
+  height: 20%;
+}
+
+div img {
+  width: 50%;
+  height: 50%;
+}
+
+footer nav a {
+  background-color: black;
+  color: aliceblue;
+}
+/*   ---SECTION CONTENT---- */
+
 /*    ----Composite Photograghy page--- */
+
 .image-restore h2 {
   font-size: 60px;
   margin: 10px;
 }
 .image-restore {
-  display: flex; 
+  display: flex;
   /* align-items: center; */
   flex-flow: wrap;
-   margin: 0 20%;
-   
+  margin: 0 10%;
 }
 .image-restore div {
   width: 100%;
-   padding: 20;
-   display: flex; 
-   /* flex-flow: wrap; */
-   justify-content: space-between;
-    margin: 5%;
+  padding: 20;
+  display: flex;
+  justify-content: center;
+  margin: 5%;
 }
 .image-restore div image {
   padding: 30px;
-  width: 300%; 
-  /* height: 33%;  */
-}
-.image-restore div span {
-  padding: 30px;
   width: 30%;
+ }
+.image-restore div span {
+  padding: 25px;
+  width: 30%;
+}
+
+/*  ---Photo Restoration---- */
+.title {
+  text-align: center;
+}
+.image-restore div {
+  background-color: blueviolet;
+  padding: 20px;
+  margin: 2.5%;
+} 
+.image-restore div img {
+  width: 40%;
+}
+
+/*  ---- Composite Photograghy< ------ */
+.composite section {
+  padding: 10px;
+  margin: 2.5%;
+  background-color: blueviolet;
+  color: white;
+  border: 3px dashed black; 
+  text-align: center;
+}
+.composite section p {
+  padding: 20px;
+  margin: 2.5%;
+}
+
+.image2 img {
+  width: 45%;
+  
+  
 }
