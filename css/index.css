@@ -2,7 +2,98 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 html,
 body,
 div,
@@ -105,54 +196,72 @@ nav,
 section {
   display: block;
 }
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
 }
-
-html,
-body {
+html {
+  font-size: 62.5%;
+  max-width: 1000px;
+}
+.composite section {
+  padding: 10px;
+  height: 1200px;
+  margin: 2.5%;
+  background-color: blueviolet;
+  color: white;
+  border: 3px dashed black;
+  text-align: center;
+}
+.composite section h2 {
+  font-size: 5rem;
+}
+.composite section p {
+  font-size: 1.75rem;
+  margin: 2.5%;
+}
+.composite .image1 {
   height: 100%;
-  font-family: "Titillium Web", sans-serif;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Bangers", cursive;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
+.composite .image2 {
+  height: 65%;
 }
-
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
-
+/*  ---Photo Restoration---- */
+.title {
+  font-size: 7rem;
+  text-align: center;
+}
+.image-restore {
+  display: flex;
+  align-items: center;
+  flex-flow: wrap;
+  margin: 0 10%;
+  text-align: center;
+}
+.image-restore div {
+  background-color: blueviolet;
+  padding: 1px;
+  margin: 1.5%;
+  width: 100%;
+}
+.image-restore h2 {
+  width: 100%;
+  font-size: 3rem;
+  margin: 10px;
+}
+.image-restore div image {
+  padding: 30px;
+  width: 30%;
+}
+.image-restore div span {
+  font-size: 1.2rem;
+  padding: 25px;
+  margin: 1rem;
+}
+.image2 img {
+  width: 45%;
+}
 .container {
-  width: 880px;
+  width: 900px;
   margin: 0 auto;
   justify-content: center;
 }
@@ -160,24 +269,22 @@ a:hover {
   background-color: darkviolet;
   color: white;
 }
-
 header {
-  width: 98%;
+  width: 90%;
   padding: 20px auto;
   display: flex;
   justify-content: space-between;
 }
-
 nav {
+  width: 80%;
+  font-size: 1.75rem;
   color: blueviolet;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 5% 0;
 }
-
 nav a {
   text-decoration: none;
-  padding: 0.75%;
 }
 .logo {
   width: 20%;
@@ -195,7 +302,7 @@ main {
   margin: 2.5%;
 }
 h1 {
-  font-size: 80px;
+  font-size: 8rem;
 }
 .Profile img {
   height: 85%;
@@ -216,7 +323,7 @@ h1 {
   height: 50%;
   width: 45%;
   margin: 2.5%;
-  padding: 20px;
+  padding: 2rem;
   background-color: blueviolet;
   color: aliceblue;
   border: 3px solid purple;
@@ -232,75 +339,14 @@ h1 {
   width: 50%;
   height: 20%;
 }
-
 div img {
   width: 50%;
   height: 50%;
 }
-
+footer nav {
+  width: 100%;
+}
 footer nav a {
   background-color: black;
   color: aliceblue;
-}
-/*   ---SECTION CONTENT---- */
-
-/*    ----Composite Photograghy page--- */
-
-.image-restore h2 {
-  font-size: 60px;
-  margin: 10px;
-}
-.image-restore {
-  display: flex;
-  /* align-items: center; */
-  flex-flow: wrap;
-  margin: 0 10%;
-}
-.image-restore div {
-  width: 100%;
-  padding: 20;
-  display: flex;
-  justify-content: center;
-  margin: 5%;
-}
-.image-restore div image {
-  padding: 30px;
-  width: 30%;
- }
-.image-restore div span {
-  padding: 25px;
-  width: 30%;
-}
-
-/*  ---Photo Restoration---- */
-.title {
-  text-align: center;
-}
-.image-restore div {
-  background-color: blueviolet;
-  padding: 20px;
-  margin: 2.5%;
-} 
-.image-restore div img {
-  width: 40%;
-}
-
-/*  ---- Composite Photograghy< ------ */
-.composite section {
-  padding: 10px;
-  margin: 2.5%;
-  background-color: blueviolet;
-  color: white;
-  border: 3px dashed black; 
-  text-align: center;
-}
-.composite section p {
-  padding: 20px;
-  margin: 2.5%;
-}
-
-.image2 img {
-  width: 45%;
-  
-  
 }
